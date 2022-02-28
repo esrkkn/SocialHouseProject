@@ -1,1 +1,1 @@
-# newproject
+# Social Media Group Project
