@@ -10,9 +10,9 @@ export default function Routes(){
    
       <Switch>
 
-        <Route exact path="/" component={Main}/>
-        <Route exact path="/post" component={CreatePost}/>
-        <Route exact path="/login" component={LoginPage}/>
+        <Route exact path="/" render={(props)=> <Main{...props}/>}/>
+        <Route exact path="/post" render={(props)=> <CreatePost{...props}/>}/>
+        <Route exact path="/login" render={(props)=> <LoginPage{...props}/>}/>
         <Route component={Unknown}/>
 
 </Switch>
