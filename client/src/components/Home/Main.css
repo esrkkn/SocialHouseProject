@@ -14,8 +14,15 @@ height: 300px;
     font-weight: bold;
     
 }
-.card{
+.cardcontainer{
     width: 100%;
-    height: 300px
+    height: 450px;
+    
  
+}
+.react-multiple-carousel__arrow{
+    top: 30%!important
+}
+.carouselcontainer{
+    margin: 30px;
 }

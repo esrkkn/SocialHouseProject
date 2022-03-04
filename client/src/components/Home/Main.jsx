@@ -105,7 +105,7 @@ export default function Main({ deviceType }) {
   ];
   
     return (
-      <Carousel 
+      <Carousel className="carouselcontainer"
       focusOnSelect={true}
       partialVisible={true}
       swipeable={false}
@@ -124,10 +124,11 @@ export default function Main({ deviceType }) {
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
+      
       >
         {images.map((item, index) =>{
           return (
-            <Card key={index} >
+            <Card key={index} className="cardcontainer">
             <Card.Img variant="top" src={item.image} className="one" />
             <Card.Body >
               <Card.Title >{item.text} </Card.Title>
