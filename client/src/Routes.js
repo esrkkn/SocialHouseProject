@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./components/Home/Main";
+import Carousel from "./components/Home/Carousel";
 import { Route, Switch } from "react-router-dom";
 import CreatePost from "./components/Profile/CreatePost";
 import LoginPage from "./components/Login/LoginPage";
@@ -9,7 +9,7 @@ import "./App.css"
 export default function Routes() {
   return (
     <Switch>
-      <Route exact path="/" render={(props) => <Main {...props} />} />
+      <Route exact path="/" render={(props) => <Carousel {...props} />} />
       <Route exact path="houses" render={(props) => <HouseList {...props} />} />
       <Route exact path="/post" render={(props) => <CreatePost {...props} />} />
       <Route exact path="/login" render={(props) => <LoginPage {...props} />} />

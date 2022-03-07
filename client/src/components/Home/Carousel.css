@@ -8,7 +8,7 @@ height: 300px;
 }
 .three{
     width: 100%;
-    height: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -17,7 +17,8 @@ height: 300px;
 
 .cardcontainer{
     width: 100%;
-    height: 450px;
+    height: 500px;
+    margin-bottom: 50px;
     
  
 }
@@ -27,4 +28,6 @@ height: 300px;
 }
 .carouselcontainer{
     margin: 30px;
+    
+    height: 100%;
 }

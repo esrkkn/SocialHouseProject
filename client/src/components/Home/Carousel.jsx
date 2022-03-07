@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Main.css"
+import "./Carousel.css"
 
 import Card from 'react-bootstrap/Card'
 

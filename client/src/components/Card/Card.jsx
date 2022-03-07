@@ -10,35 +10,20 @@ import { SocialHouseContext } from '../../Context';
 export default function EachCard({item, cb}) {
 const {image, setImage} = useContext(SocialHouseContext)
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea onClick={showCard}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={item.image}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {item.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-         {item.address}
-          </Typography>
-        </CardContent>
-        <IconButton
-          aria-label="add to favorites"
-          onClick={() => cb(item)}
-          className={toggled ? "text-danger" : ""}
-        >
-          <FavoriteIcon fontSize="large" />
-        </IconButton>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Comment
-        </Button>
-      </CardActions>
-    </Card>
+    <Card key={index} className="cardcontainer">
+            <Card.Img variant="top" src={item.image} className="one" />
+            <Card.Body >
+              <Card.Title >{item.text} </Card.Title>
+              <Card.Text className="two">
+              {item.address}
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="three">
+
+            <span >{item.room}</span>
+
+              <span>{item.price}</span>
+            </Card.Footer>
+          </Card>
   );
 }
