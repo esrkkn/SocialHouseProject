@@ -1,0 +1,10 @@
+.container {
+  /* border: solid 1px salmon; */
+  width: 600px;
+  margin: 0 auto;
+}
+
+.formRow {
+  /* border: solid 1px limegreen; */
+  margin: 10px;
+}
