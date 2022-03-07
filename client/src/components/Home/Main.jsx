@@ -43,7 +43,7 @@ export default function Main({ deviceType }) {
       price: "613,33 €"
     },{
       image:
-        "https://pictures.immobilienscout24.de/listings/558320c5-c7ec-439a-89b6-d6d2f4045bb8-1508199592.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73",
+        "https://pictures.immobilienscout24.de/listings/031efc9d-9d04-48c2-8693-58c1b2712a15-1508203662.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73",
       text: "Ollstuhlgerechte 2-Zimmer-Wohnung",
       address: "12107 Berlin",
       room: "2Zi",
@@ -112,7 +112,7 @@ export default function Main({ deviceType }) {
       draggable={false}
       showDots={true}
       responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
+      ssr={true} 
       infinite={true}
       autoPlay={deviceType !== "mobile" ? true : false}
       autoPlaySpeed={2000}
