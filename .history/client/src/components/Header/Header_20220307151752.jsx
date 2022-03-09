@@ -61,14 +61,41 @@ export default function App() {
                 <MDBNavbarLink href="#">Register</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Login</MDBNavbarLink>
+                <MDBNavbarLink href="#">LogIn</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </div>
         </MDBContainer>
       </MDBNavbar>
 
-      
+      <div
+        className="p-5 text-center bg-image"
+        style={{
+          width: "100%",
+          height: "95vh",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="d-flex justify-content-center align-items-center h-100">
+          <div
+            className="mask"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          >
+            <div className="nine">
+              <h1 className="mb-3">
+                Welcome to Social House Project
+                <span className="mb-3">
+                  Discover & Connect & Share over Housing
+                </span>
+              </h1>
+              <button className="btn btn-outline-light btn-lg" href="#">
+                Find Your House, Now!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
