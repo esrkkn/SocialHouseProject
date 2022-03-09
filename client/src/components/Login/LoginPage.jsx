@@ -1,27 +1,54 @@
-// import React from 'react';
-// import { Login, LoginForm } from 'react-admin';
-// import { withStyles } from '@material-ui/core/styles';
+import React from 'react';
+import {
+  MDBInput,
+  MDBCol,
+  MDBRow,
+  MDBCheckbox,
+  MDBBtn,
+  MDBIcon
+} from 'mdb-react-ui-kit';
 
-// const styles = ({
-//     main: { background: '#333' },
-//     avatar: {
-//         background: 'url(//cdn.example.com/background.jpg)',
-//         backgroundRepeat: 'no-repeat',
-//         backgroundSize: 'contain',
-//         height: 80,
-//     },
-//     icon: { display: 'none' },
-// });
+export default function Login() {
+  return (
+    <form>
+      <MDBInput className='mb-4' type='email' id='form2Example1' label='Email address' />
+      <MDBInput className='mb-4' type='password' id='form2Example2' label='Password' />
 
-// const CustomLoginForm = withStyles({
-//     button: { background: '#F15922' },
-// })(LoginForm);
+      <MDBRow className='mb-4'>
+        <MDBCol className='d-flex justify-content-center'>
+          <MDBCheckbox id='form2Example3' label='Remember me' defaultChecked />
+        </MDBCol>
+        <MDBCol>
+          <a href='#!'>Forgot password?</a>
+        </MDBCol>
+      </MDBRow>
 
-// const CustomLoginPage = props => (
-//     <Login
-//         loginForm={<CustomLoginForm />}
-//         {...props}
-//     />
-// );
+      <MDBBtn type='submit' className='mb-4' block>
+        Sign in
+      </MDBBtn>
 
-// export default withStyles(styles)(CustomLoginPage);
+      <div className='text-center'>
+        <p>
+          Not a member? <a href='#!'>Register</a>
+        </p>
+        <p>or sign up with:</p>
+
+        <MDBBtn floating className='mx-1'>
+          <MDBIcon fab icon='facebook-f' />
+        </MDBBtn>
+
+        <MDBBtn floating className='mx-1'>
+          <MDBIcon fab icon='google' />
+        </MDBBtn>
+
+        <MDBBtn floating className='mx-1'>
+          <MDBIcon fab icon='twitter' />
+        </MDBBtn>
+
+        <MDBBtn floating className='mx-1'>
+          <MDBIcon fab icon='github' />
+        </MDBBtn>
+      </div>
+    </form>
+  );
+}

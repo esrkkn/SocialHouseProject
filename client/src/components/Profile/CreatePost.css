@@ -1,10 +1,35 @@
 .container {
-  /* border: solid 1px salmon; */
-  width: 600px;
-  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: gainsboro;
+  width: 500px;
+  margin: 25px auto;
+  padding: 25px;
 }
 
-.formRow {
-  /* border: solid 1px limegreen; */
+/* .formRow {
   margin: 10px;
+} */
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.m-18 {
+  margin-top: 18px;
+}
+
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  border: 2px solid;
+  margin: 40px 0 25px;
 }
