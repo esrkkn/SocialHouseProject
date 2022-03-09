@@ -22,10 +22,8 @@ phoneNumber: {
 password: {
     type: String,
     require: true
-},
-profileImage: {
-    type: String
 }
+
 
 
 

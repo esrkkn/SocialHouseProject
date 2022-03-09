@@ -11,6 +11,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import { FcKey } from "react-icons/fc";
+import { NavLink } from "react-router-dom";
 
 const spacerStyle = {
   flex: "0.7",
@@ -58,7 +59,7 @@ export default function App() {
                 <MDBNavbarLink href="#">Create Post</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Register</MDBNavbarLink>
+                <MDBNavbarLink href="#"><NavLink to="/Register">Register</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href="#">Login</MDBNavbarLink>
