@@ -38,7 +38,7 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarExample01">
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="#">
+                <MDBNavbarLink aria-current="page" href="/">
                   <h5 className="logo">
                     <FcKey style={{fontSize: 30}}/>
                     SocialHouse<span>Project</span>
@@ -46,23 +46,23 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="#">
+                <MDBNavbarLink aria-current="page" href="/">
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Ads</MDBNavbarLink>
+                <MDBNavbarLink href="">Ads</MDBNavbarLink>
               </MDBNavbarItem>
             
               <div style={spacerStyle}></div>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Create Post</MDBNavbarLink>
+                <MDBNavbarLink >Create Post</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#"><NavLink to="/Register">Register</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href="#"><NavLink to="/register">Register</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">LogIn</MDBNavbarLink>
+                <MDBNavbarLink href="#"><NavLink to='/login'> LogIn</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </div>
