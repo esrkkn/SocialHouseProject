@@ -35,9 +35,10 @@ router.post('/login', async (req, res) => {
 
         const newUser = new User(req.body)
 
-        const user = await User.findOne({email: email, password: password}).select('email')
+        const user = await User.findOne({email: email, password: password}).select('email firstName lastName')
 
-        res.send({success: true, user})
+        res.send({success: true, user: user})
+        console.log('user is',user);
         
     } catch (error) {
 

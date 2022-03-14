@@ -2,7 +2,6 @@ import React from "react";
 import { FloatingLabel, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
-import "./Register.css"
 
 
 export default function Register() {
@@ -42,7 +41,6 @@ export default function Register() {
 
       <FloatingLabel controlId="firstName" label="First Name" className="mb-3">
         <Form.Control
-        required
           type="text"
           placeholder="First Name"
           value={data.firstName}

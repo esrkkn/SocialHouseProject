@@ -106,7 +106,7 @@ export default function Main({ deviceType }) {
   ];
   
     return (
-    <><header
+    <><div
       className="p-5 text-center bg-image header"
       style={{
         width: "100%",
@@ -133,7 +133,7 @@ export default function Main({ deviceType }) {
           </div>
         </div>
       </div>
-    </header>
+    </div>
       <Carousel className="carouselcontainer"
       focusOnSelect={true}
       partialVisible={true}
