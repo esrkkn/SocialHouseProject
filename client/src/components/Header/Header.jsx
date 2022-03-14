@@ -20,19 +20,9 @@ const spacerStyle = {
 export default function App() {
   return (
     <header className="text-center bg-image">
-      <MDBNavbar
-        expand="lg"
-        light
-        bgColor="white"
-        sticky
-        className="navbarExample02"
-      >
+      <MDBNavbar expand="lg" light bgColor="white" sticky className="navbarExample02">
         <MDBContainer fluid>
-          <MDBNavbarToggler
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <MDBNavbarToggler aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
             <MDBIcon fas icon="bars" />
           </MDBNavbarToggler>
           <div className="collapse navbar-collapse" id="navbarExample01">
@@ -40,7 +30,7 @@ export default function App() {
               <MDBNavbarItem active>
                 <MDBNavbarLink aria-current="page" href="/">
                   <h5 className="logo">
-                    <FcKey style={{fontSize: 30}}/>
+                    <FcKey style={{ fontSize: 30 }} />
                     SocialHouse<span>Project</span>
                   </h5>
                 </MDBNavbarLink>
@@ -53,23 +43,27 @@ export default function App() {
               <MDBNavbarItem>
                 <MDBNavbarLink href="">Ads</MDBNavbarLink>
               </MDBNavbarItem>
-            
+
               <div style={spacerStyle}></div>
               <MDBNavbarItem>
-                <MDBNavbarLink >Create Post</MDBNavbarLink>
+                <MDBNavbarLink href="#">
+                  <NavLink to="/post">Create Post</NavLink>
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#"><NavLink to="/register">Register</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href="#">
+                  <NavLink to="/register">Register</NavLink>
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#"><NavLink to='/login'> LogIn</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href="#">
+                  <NavLink to="/login"> LogIn</NavLink>
+                </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </div>
         </MDBContainer>
       </MDBNavbar>
-
-      
     </header>
   );
 }
