@@ -2,8 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Carousel.css"
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../Header/Header.css";
+
 import Card from 'react-bootstrap/Card'
 
 
@@ -106,34 +105,6 @@ export default function Main({ deviceType }) {
   ];
   
     return (
-    <><header
-      className="p-5 text-center bg-image header"
-      style={{
-        width: "100%",
-        height: "95vh",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="d-flex justify-content-center align-items-center h-100">
-        <div
-          className="mask"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-        >
-          <div className="nine">
-            <h1 className="mb-3">
-              Welcome to Social House Project
-              <span className="mb-3">
-                Discover & Connect & Share over Housing
-              </span>
-            </h1>
-            <button className="btn btn-outline-light btn-lg" href="#">
-              Find Your House, Now!
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
       <Carousel className="carouselcontainer"
       focusOnSelect={true}
       partialVisible={true}
@@ -174,6 +145,6 @@ export default function Main({ deviceType }) {
           </Card>
           );
         })}
-      </Carousel></>
+      </Carousel>
     );
 }

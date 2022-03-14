@@ -133,7 +133,7 @@ export default function Main({ deviceType }) {
           </div>
         </div>
       </div>
-    </header>
+    </div>
       <Carousel className="carouselcontainer"
       focusOnSelect={true}
       partialVisible={true}

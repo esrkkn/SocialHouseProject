@@ -10,6 +10,7 @@ import {
 import { useState, useContext } from "react";
 import axios from "axios";
 import { SocialHouseContext } from "../../Context";
+import './LoginPage.css';
 
 export default function Login() {
   const [data, setData] = useState({
@@ -45,7 +46,7 @@ export default function Login() {
 
 
   return (
-    <form>
+    <form className="formContainer">
       <MDBInput
         className="mb-4"
         type="email"

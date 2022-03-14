@@ -42,7 +42,6 @@ export default function Register() {
 
       <FloatingLabel controlId="firstName" label="First Name" className="mb-3">
         <Form.Control
-        required
           type="text"
           placeholder="First Name"
           value={data.firstName}

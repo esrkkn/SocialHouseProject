@@ -2,8 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Carousel.css"
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../Header/Header.css";
+
 import Card from 'react-bootstrap/Card'
 
 
@@ -106,8 +105,8 @@ export default function Main({ deviceType }) {
   ];
   
     return (
-    <><header
-      className="p-5 text-center bg-image header"
+    <></><div
+      className="p-5 text-center bg-image"
       style={{
         width: "100%",
         height: "95vh",
@@ -133,7 +132,7 @@ export default function Main({ deviceType }) {
           </div>
         </div>
       </div>
-    </header>
+    </div>
       <Carousel className="carouselcontainer"
       focusOnSelect={true}
       partialVisible={true}
@@ -174,6 +173,6 @@ export default function Main({ deviceType }) {
           </Card>
           );
         })}
-      </Carousel></>
+      </Carousel>
     );
 }

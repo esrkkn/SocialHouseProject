@@ -11,7 +11,6 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import { FcKey } from "react-icons/fc";
-import { NavLink } from "react-router-dom";
 
 const spacerStyle = {
   flex: "0.7",
@@ -38,7 +37,7 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarExample01">
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="/">
+                <MDBNavbarLink aria-current="page" href="#">
                   <h5 className="logo">
                     <FcKey style={{fontSize: 30}}/>
                     SocialHouse<span>Project</span>
@@ -46,23 +45,23 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="/">
+                <MDBNavbarLink aria-current="page" href="#">
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="">Ads</MDBNavbarLink>
+                <MDBNavbarLink href="#">Ads</MDBNavbarLink>
               </MDBNavbarItem>
             
               <div style={spacerStyle}></div>
               <MDBNavbarItem>
-                <MDBNavbarLink >Create Post</MDBNavbarLink>
+                <MDBNavbarLink href="#">Create Post</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#"><NavLink to="/register">Register</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href="#">Register</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#"><NavLink to='/login'> LogIn</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href="#">Login</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </div>
