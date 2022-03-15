@@ -4,6 +4,7 @@ require('dotenv').config()
 
 app.use(express.json())
 app.use('/users',require('./api/users') )
+app.use('/posts',require('./api/posts') )
 
 const connectToDB = require('./config/db')
 connectToDB()
