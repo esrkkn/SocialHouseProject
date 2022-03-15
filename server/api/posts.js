@@ -8,7 +8,7 @@ router.post('/add', async (req, res) => {
     try {
         console.log('posts/add body is', req.body)
 
-        const newPost = new Post(req.body)
+        const newPost = new Post(req.body);
         console.log('newPost is', newPost);
 
         // const post = await newPost.save()

@@ -23,12 +23,13 @@ function CreatePost() {
   const [posts, setPosts] = useState([]);
   const { userData } = useContext(SocialHouseContext);
 
-  const handleSave = async () => {
+  const handleSave = async (e) => {
+    e.preventDefault();
     console.log("saved");
 
     const data = {
       owner: userData._id,
-      post: { ...newPost },
+      ...newPost,
     };
 
     console.log("Home: handleSave: data is", data);
