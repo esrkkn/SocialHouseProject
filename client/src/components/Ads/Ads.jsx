@@ -3,8 +3,17 @@ import { useEffect, useState, useContext  } from "react";
 import { SocialHouseContext } from "../../Context";
 import { useHistory } from "react-router";
 import axios from "axios";
-
-
+import Carousel from "../Home/Carousel"
+import Header from "../Header/Header"
+import {
+    MDBCard,
+    MDBCardTitle,
+    MDBCardText,
+    MDBCardBody,
+    MDBCardImage,
+    MDBRow,
+    MDBCol,
+  } from "mdb-react-ui-kit";
 export default function Ads() {
 
     const history = useHistory()
@@ -34,7 +43,33 @@ export default function Ads() {
  
 
 return (
-    <div></div>
+    <div>
+              <Header />
+              <Carousel />
+        <h1 style={{textAlign: "center", marginBottom: "100px"}}>List of Apartments</h1>
+      <div className="cardContainer">
+        {posts.map((item) => (
+          <MDBCard style={{ maxWidth: "540px" }} key={item._id}>
+          <MDBRow className="g-0">
+            <MDBCol md="4">
+              <MDBCardImage src={item.image} alt="..." fluid />
+            </MDBCol>
+            <MDBCol md="8">
+              <MDBCardBody>
+                <MDBCardTitle>{item.title}</MDBCardTitle>
+                <MDBCardText>{item.description}</MDBCardText>
+                <MDBCardText>{item.location}</MDBCardText>
+                <MDBCardText>
+                  <span>{item.rooms}rm</span>
+                  <span>{item.price}€</span>
+                </MDBCardText>
+              </MDBCardBody>
+            </MDBCol>
+          </MDBRow>
+        </MDBCard>
+        ))}
+      </div>
+    </div>
 )
     
 }

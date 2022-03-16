@@ -2,11 +2,33 @@ const express = require('express')
 const Post = require('../models/Post')
 const router = express.Router()
 
+const multer = require('multer')
 
-router.post('/add', async (req, res) => {
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+ 
+
+const storageCloudinary = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'newproject',
+    
+    public_id: (req, file) => Date.now(),
+    
+  },
+  
+});
+const uploadCloudinary = multer({ storage: storageCloudinary });
+
+ 
+
+
+router.post('/add' , uploadCloudinary.single('image'), async (req, res) => {
 
     try {
         console.log('posts/add body is', req.body)
+
+        if (req.file) req.body.image = req.file.path;
 
         const newPost = new Post(req.body);
         
@@ -16,6 +38,7 @@ router.post('/add', async (req, res) => {
         console.log('newPost is', post);
         if (!post) return res.send({success: false, errorId: 2})
 
+        
         res.send({success: true, newPost})
     } catch (error) {
         
@@ -29,7 +52,7 @@ router.get('/list', async (req, res) => {
 
     try {
         
-        const posts = await Post.find().limit(10).populate({
+        const posts = await Post.find().populate({
             path: 'owner',
             select: 'firstName lastName'
         })

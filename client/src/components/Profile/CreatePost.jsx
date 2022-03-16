@@ -19,8 +19,8 @@ function CreatePost() {
     service: "",
     image: "",
   });
-  
-  const { userData } = useContext(SocialHouseContext);
+
+  const { userData} = useContext(SocialHouseContext);
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -28,16 +28,23 @@ function CreatePost() {
 
     const data = {
       owner: userData._id,
-      ...newPost
+      ...newPost,
     };
 
-    console.log("Home: handleSave: data is", data);
-    const response = await axios.post("/posts/add", data);
+    const formdata = new FormData();
 
-    console.log("save post: response is", response);
+    Object.entries(data).forEach((item) => formdata.set(item[0], item[1]));
 
-    
+    if (newPost.image) formdata.set("image", newPost.image, "image");
+
+
+    const response = await axios.post('/posts/add', formdata);
+
     console.log("Post is:", newPost);
+    console.log("response is:", response);
+
+    if (response.data.success) setNewPost({...response.data.image})
+
   };
 
   return (
@@ -56,23 +63,35 @@ function CreatePost() {
 
         <Row>
           <Col>
-            <FloatingLabel className="mb-3" controlId="form.location" label="Location">
+            <FloatingLabel
+              className="mb-3"
+              controlId="form.location"
+              label="Location"
+            >
               <Form.Control
                 type="text"
                 placeholder="Password"
                 value={newPost.location}
-                onChange={(e) => setNewPost({ ...newPost, location: e.target.value })}
+                onChange={(e) =>
+                  setNewPost({ ...newPost, location: e.target.value })
+                }
               />
             </FloatingLabel>
           </Col>
 
           <Col>
-            <FloatingLabel className="mb-3" controlId="form.rooms" label="Rooms">
+            <FloatingLabel
+              className="mb-3"
+              controlId="form.rooms"
+              label="Rooms"
+            >
               <Form.Control
                 type="number"
                 placeholder="Rooms"
                 value={newPost.rooms}
-                onChange={(e) => setNewPost({ ...newPost, rooms: e.target.value })}
+                onChange={(e) =>
+                  setNewPost({ ...newPost, rooms: e.target.value })
+                }
               />
             </FloatingLabel>
           </Col>
@@ -84,33 +103,73 @@ function CreatePost() {
             placeholder="Description"
             style={{ height: "250px" }}
             value={newPost.description}
-            onChange={(e) => setNewPost({ ...newPost, description: e.target.value })}
+            onChange={(e) =>
+              setNewPost({ ...newPost, description: e.target.value })
+            }
           />
         </FloatingLabel>
 
         <Row className="m-18">
           <Col>
-            <FloatingLabel className="mb-3" controlId="form.price" label="Price">
+            <FloatingLabel
+              className="mb-3"
+              controlId="form.price"
+              label="Price"
+            >
               <Form.Control
                 type="number"
                 placeholder="Price"
                 value={newPost.price}
-                onChange={(e) => setNewPost({ ...newPost, price: e.target.value })}
+                onChange={(e) =>
+                  setNewPost({ ...newPost, price: e.target.value })
+                }
               />
             </FloatingLabel>
           </Col>
 
           <Col className="v-center">
             <Form.Group className="mb-3" controlId="form.rentOrSale">
-              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="Rent" value="rent" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })} />
-              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="Sale" value="sale" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })}/>
+<<<<<<< HEAD
+              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="for rent" value="rent" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })} />
+              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="for sale" value="sale" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })}/>
+=======
+              <Form.Check
+                inline
+                type="radio"
+                name="rentOrSale"
+                id="rent"
+                label="for rent"
+                value="rent"
+                onChange={(e) =>
+                  setNewPost({ ...newPost, service: e.target.value })
+                }
+              />
+              <Form.Check
+                inline
+                type="radio"
+                name="rentOrSale"
+                id="sale"
+                label="for sale"
+                value="sale"
+                onChange={(e) =>
+                  setNewPost({ ...newPost, service: e.target.value })
+                }
+              />
+>>>>>>> 2022d10536100a7cc0b9fd538b08ed4f17987c4e
             </Form.Group>
           </Col>
         </Row>
 
         <Form.Group className="mb-3" controlId="form.image">
           <Form.Label>Add an image</Form.Label>
-          <Form.Control type="file" accept="image/png, image/jpeg" />
+          <Form.Control
+            type="file"
+            accept="image/png, image/jpeg"
+            onChange={(e) =>
+              setNewPost({ ...newPost, image: e.currentTarget.files[0] })
+            }
+            // URL.createObjectURL(e.currentTarget.files[0])
+          />
         </Form.Group>
 
         <hr></hr>
@@ -126,36 +185,3 @@ function CreatePost() {
 }
 
 export default CreatePost;
-
-// FORM WITH NO BOOTSTRAP //
-
-/* <form action="" method="post">
-  <div className="formRow">
-    <label htmlFor="title">Title: </label>
-    <input type="text" name="title" />
-  </div>
-  <div className="formRow">
-    <label htmlFor="description">Description: </label>
-    <textarea id="description" name="description" rows="10" cols="50"></textarea>
-  </div>
-  <div className="formRow">
-    <label htmlFor="city">City: </label>
-    <input type="text" name="city" />
-  </div>
-  <div className="formRow">
-    <input type="radio" id="rent" name="rentOrSale" value="forRent" />
-    <label htmlFor="rent">for Rent</label>
-    <input type="radio" id="sale" name="rentOrSale" value="forSale" />
-    <label htmlFor="sale">for Sale</label>
-  </div>
-  <div className="formRow">
-    <label htmlFor="price">Price: </label>
-    <input type="text" name="price" />
-  </div>
-  <div className="formRow">
-    <input type="file" id="image" name="image" accept="image/png, image/jpeg" />
-  </div>
-  <div className="formRow">
-    <input type="submit" value="Create Post" />
-  </div>
-</form>; */
