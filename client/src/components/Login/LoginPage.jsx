@@ -59,15 +59,16 @@ export default function Login() {
         className="mb-4"
         type="email"
         id="form2Example1"
-        label="Email address"
+        placeholder="Email"
         value={data.email}
         onChange={(e) => setData({ ...data, email: e.target.value })}
+        
       />
       <MDBInput
         className="mb-4"
         type="password"
+        placeholder="Password"
         id="form2Example2"
-        label="Password"
         value={data.password}
         onChange={(e) => setData({ ...data, password: e.target.value })}
       />
@@ -81,8 +82,8 @@ export default function Login() {
         </MDBCol>
       </MDBRow>
 
-      <MDBBtn type="submit" className="mb-4" block onClick={handleClick} color="info">
-      <NavLink to="/ads">Sign in</NavLink>
+      <MDBBtn type="Sign In" className="mb-4" block onClick={handleClick} color="info">
+      <NavLink to="/ads">Sign In</NavLink>
       </MDBBtn>
 
       <div className="text-center">
@@ -91,8 +92,8 @@ export default function Login() {
         </p>
         <p>or sign up with:</p>
 
-        <MDBBtn floating className="mx-1">
-          <MDBIcon fab icon="facebook-f" color='primary'/>
+        <MDBBtn floating className="mx-1" color='primary'>
+          <MDBIcon fab icon="facebook-f" />
         </MDBBtn>
 
         <MDBBtn floating className="mx-1" color='danger'>
