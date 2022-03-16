@@ -9,6 +9,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useState, useContext } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { SocialHouseContext } from "../../Context";
 import './LoginPage.css';
 
@@ -74,7 +75,7 @@ export default function Login() {
       </MDBRow>
 
       <MDBBtn type="button" className="mb-4" block onClick={handleClick} >
-        Sign in
+      <NavLink to="/ads">Sign in</NavLink>
       </MDBBtn>
 
       <div className="text-center">

@@ -11,6 +11,7 @@ import "./CreatePost.css";
 
 function CreatePost() {
 
+  const [posts, setPosts] = useState([]);
 
   const [newPost, setNewPost] = useState({
     title: "",

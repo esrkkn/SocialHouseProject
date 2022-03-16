@@ -11,6 +11,8 @@ import "./CreatePost.css";
 
 function CreatePost() {
 
+  const [posts, setPosts] = useState([]);
+  const { userData. setUserData } = useContext(SocialHouseContext);
 
   const [newPost, setNewPost] = useState({
     title: "",

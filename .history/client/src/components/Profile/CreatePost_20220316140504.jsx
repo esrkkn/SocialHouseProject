@@ -11,6 +11,8 @@ import "./CreatePost.css";
 
 function CreatePost() {
 
+  const [posts, setPosts] = useState([]);
+  const { userData } = useContext(SocialHouseContext);
 
   const [newPost, setNewPost] = useState({
     title: "",
@@ -22,8 +24,6 @@ function CreatePost() {
     image: "",
   });
   
-  const { userData } = useContext(SocialHouseContext);
-
   const handleSave = async (e) => {
     e.preventDefault();
     console.log("saved");

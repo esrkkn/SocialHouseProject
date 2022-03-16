@@ -9,14 +9,14 @@ router.post('/add', async (req, res) => {
         console.log('posts/add body is', req.body)
 
         const newPost = new Post(req.body);
-        console.log('newPost is', newPost);
+        
 
         // const post = await newPost.save()
-        const post = await newPost.save().then( item => item.populate({path: 'owner post', select: 'firstName lastName email'}))
-
+        const post = await newPost.save().then( item => item.populate({path: 'owner', select: 'email'}))
+        console.log('newPost is', post);
         if (!post) return res.send({success: false, errorId: 2})
 
-        res.send({success: true, post})
+        res.send({success: true, newPost})
     } catch (error) {
         
         console.log('Posts add ERROR', error. message)
