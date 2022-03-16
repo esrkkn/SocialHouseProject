@@ -16,19 +16,19 @@ function CreatePost() {
     rooms: "",
     description: "",
     price: "",
-    rent: false,
-    sale: false,
+    service: "",
     image: "",
   });
-  const [posts, setPosts] = useState([]);
+  
   const { userData } = useContext(SocialHouseContext);
 
-  const handleSave = async () => {
+  const handleSave = async (e) => {
+    e.preventDefault();
     console.log("saved");
 
     const data = {
       owner: userData._id,
-      post: { ...newPost },
+      ...newPost
     };
 
     console.log("Home: handleSave: data is", data);
@@ -36,7 +36,7 @@ function CreatePost() {
 
     console.log("save post: response is", response);
 
-    if (response.data.success) setPosts([...posts, response.data.post]);
+    
     console.log("Post is:", newPost);
   };
 
@@ -102,8 +102,8 @@ function CreatePost() {
 
           <Col className="v-center">
             <Form.Group className="mb-3" controlId="form.rentOrSale">
-              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="for rent" />
-              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="for sale" />
+              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="for rent" value="rent" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })} />
+              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="for sale" value="sale" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })}/>
             </Form.Group>
           </Col>
         </Row>

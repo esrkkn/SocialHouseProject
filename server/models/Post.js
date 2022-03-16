@@ -26,12 +26,11 @@ price: {
     type: String,
     require: true
 },
-rent: {
-    type: Boolean
+service: {
+    type: String,
+    require: true
 },
-sale: {
-    type: Boolean
-},
+
 image: {
     type: String
 }
