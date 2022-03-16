@@ -42,7 +42,7 @@ function CreatePost() {
 
   return (
     <div className="container">
-      <h2>Rent or sell your house!</h2>
+      <h2>Rent or sell your Home!</h2>
 
       <Form>
         <FloatingLabel className="mb-3" controlId="form.title" label="Title">
@@ -59,7 +59,7 @@ function CreatePost() {
             <FloatingLabel className="mb-3" controlId="form.location" label="Location">
               <Form.Control
                 type="text"
-                placeholder="Location"
+                placeholder="Password"
                 value={newPost.location}
                 onChange={(e) => setNewPost({ ...newPost, location: e.target.value })}
               />
@@ -102,8 +102,8 @@ function CreatePost() {
 
           <Col className="v-center">
             <Form.Group className="mb-3" controlId="form.rentOrSale">
-              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="for rent" value="rent" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })} />
-              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="for sale" value="sale" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })}/>
+              <Form.Check inline type="radio" name="rentOrSale" id="rent" label="Rent" value="rent" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })} />
+              <Form.Check inline type="radio" name="rentOrSale" id="sale" label="Sale" value="sale" onChange={(e) => setNewPost({ ...newPost, service: e.target.value })}/>
             </Form.Group>
           </Col>
         </Row>
@@ -116,7 +116,7 @@ function CreatePost() {
         <hr></hr>
 
         <div className="h-center">
-          <Button variant="secondary" type="submit" onClick={handleSave}>
+          <Button variant="info" type="submit" onClick={handleSave}>
             Create Post
           </Button>
         </div>

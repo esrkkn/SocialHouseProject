@@ -45,22 +45,30 @@ export default function Login() {
   };
 
 
-
   return (
-    <form className="formContainer">
+    <div className="loginPage">
+      <div class="container">
+        <div class="row align-items-center my-5">
+          <div class="col-lg-">
+         
+          </div>
+          <div class="col-lg">
+            <h2 class="font-weight-light">Login</h2>
+    <form>
       <MDBInput
         className="mb-4"
         type="email"
         id="form2Example1"
-        label="Email address"
+        placeholder="Email"
         value={data.email}
         onChange={(e) => setData({ ...data, email: e.target.value })}
+        
       />
       <MDBInput
         className="mb-4"
         type="password"
+        placeholder="Password"
         id="form2Example2"
-        label="Password"
         value={data.password}
         onChange={(e) => setData({ ...data, password: e.target.value })}
       />
@@ -74,8 +82,8 @@ export default function Login() {
         </MDBCol>
       </MDBRow>
 
-      <MDBBtn type="button" className="mb-4" block onClick={handleClick} >
-      <NavLink to="/ads">Sign in</NavLink>
+      <MDBBtn type="Sign In" className="mb-4" block onClick={handleClick} color="info">
+      <NavLink to="/ads">Sign In</NavLink>
       </MDBBtn>
 
       <div className="text-center">
@@ -84,22 +92,26 @@ export default function Login() {
         </p>
         <p>or sign up with:</p>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='primary'>
           <MDBIcon fab icon="facebook-f" />
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='danger'>
           <MDBIcon fab icon="google" />
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='info'>
           <MDBIcon fab icon="twitter" />
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='dark'>
           <MDBIcon fab icon="github" />
         </MDBBtn>
       </div>
     </form>
+    </div>
+        </div>
+      </div>
+    </div>
   );
 }
