@@ -41,7 +41,7 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="">Ads</MDBNavbarLink>
+                <MDBNavbarLink href=""><NavLink to="/ads">Ads</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
 
               <div style={spacerStyle}></div>
