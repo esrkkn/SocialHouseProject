@@ -42,7 +42,7 @@ function CreatePost() {
 
   return (
     <div className="container">
-      <h2>Rent or sell your house!</h2>
+      <h2>Rent or sell your Home!</h2>
 
       <Form>
         <FloatingLabel className="mb-3" controlId="form.title" label="Title">
