@@ -45,9 +45,16 @@ export default function Login() {
   };
 
 
-
   return (
-    <form className="formContainer">
+    <div className="loginPage">
+      <div class="container">
+        <div class="row align-items-center my-5">
+          <div class="col-lg-">
+         
+          </div>
+          <div class="col-lg">
+            <h2 class="font-weight-light">Login</h2>
+    <form>
       <MDBInput
         className="mb-4"
         type="email"
@@ -74,7 +81,7 @@ export default function Login() {
         </MDBCol>
       </MDBRow>
 
-      <MDBBtn type="button" className="mb-4" block onClick={handleClick} >
+      <MDBBtn type="submit" className="mb-4" block onClick={handleClick} color="info">
       <NavLink to="/ads">Sign in</NavLink>
       </MDBBtn>
 
@@ -85,21 +92,25 @@ export default function Login() {
         <p>or sign up with:</p>
 
         <MDBBtn floating className="mx-1">
-          <MDBIcon fab icon="facebook-f" />
+          <MDBIcon fab icon="facebook-f" color='primary'/>
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='danger'>
           <MDBIcon fab icon="google" />
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='info'>
           <MDBIcon fab icon="twitter" />
         </MDBBtn>
 
-        <MDBBtn floating className="mx-1">
+        <MDBBtn floating className="mx-1" color='dark'>
           <MDBIcon fab icon="github" />
         </MDBBtn>
       </div>
     </form>
+    </div>
+        </div>
+      </div>
+    </div>
   );
 }
