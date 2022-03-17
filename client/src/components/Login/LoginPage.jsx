@@ -82,7 +82,7 @@ export default function Login() {
         </MDBCol>
       </MDBRow>
 
-      <MDBBtn type="Sign In" className="mb-4" block onClick={handleClick} color="info">
+      <MDBBtn type="submit" block className="mb-4" onClick={handleClick} color="info">
       <NavLink to="/ads">Sign In</NavLink>
       </MDBBtn>
 
