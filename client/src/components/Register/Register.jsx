@@ -44,6 +44,7 @@ export default function Register() {
 
 
   return (
+    <div className="text-center bg-images" >
     <div className="loginPage">
     <div class="container">
       <div class="row align-items-center my-5">
@@ -126,6 +127,7 @@ export default function Register() {
     </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

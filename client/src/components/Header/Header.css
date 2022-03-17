@@ -1,7 +1,7 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body{height: 100vh;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
     overflow-y: scroll;}
 body::-webkit-scrollbar {
     display: none;}
@@ -85,19 +85,7 @@ padding: 20px;
     color: lightseagreen;
     
 }
-/* button {
-	border: none;
-	outline: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-	color: #333;
-	background: #fff;
-	margin-bottom: 50px;
-	box-shadow: 0 3px 20px 0 #0000003b;
-}
-button:hover{
-	cursor: pointer;
-} */
+
 .nine h1 {
     text-align:center; font-size:50px; text-transform:uppercase; color:rgb(255, 255, 255); letter-spacing:1px;
     font-family:"Playfair Display", serif; font-weight:400;

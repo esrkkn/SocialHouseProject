@@ -46,11 +46,11 @@ export default function Login() {
 
 
   return (
+    <div className="text-center bg-images" >
     <div className="loginPage">
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-">
-         
           </div>
           <div class="col-lg">
             <h2 class="font-weight-light">Login</h2>
@@ -82,7 +82,7 @@ export default function Login() {
         </MDBCol>
       </MDBRow>
 
-      <MDBBtn type="Sign In" className="mb-4" block onClick={handleClick} color="info">
+      <MDBBtn type="submit" block className="mb-4" onClick={handleClick} color="info">
       <NavLink to="/ads">Sign In</NavLink>
       </MDBBtn>
 
@@ -112,6 +112,7 @@ export default function Login() {
     </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

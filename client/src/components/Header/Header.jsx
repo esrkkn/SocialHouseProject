@@ -47,7 +47,7 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarExample01">
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" href="/">
+                <MDBNavbarLink aria-current="page" to="/">
                   <h5 className="logo">
                     <FcKey style={{ fontSize: 30 }} />
                     SocialHouse<span>Project</span>
@@ -127,23 +127,23 @@ export default function App() {
               </MDBNavbarItem>
               
               <MDBNavbarItem>
-                <MDBNavbarLink href=""><NavLink to="/ads">Ads</NavLink></MDBNavbarLink>
+                <MDBNavbarLink ><NavLink to="/ads" style={{textDecorationLine: "none", color:"#585757"}}>Ads</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
 
               <div style={spacerStyle}></div>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">
-                  <NavLink to="/post">Create Post</NavLink>
+                <MDBNavbarLink >
+                  <NavLink to="/post" style={{textDecorationLine: "none", color:"#585757"}}>Create Post</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">
-                  <NavLink to="/register">Register</NavLink>
+                <MDBNavbarLink >
+                  <NavLink to="/register" style={{textDecorationLine: "none", color:"#585757"}}>Register</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">
-                  <NavLink to="/login"> LogIn</NavLink>
+                <MDBNavbarLink >
+                  <NavLink to="/login" style={{textDecorationLine: "none", color:"#585757"}}> Login</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
