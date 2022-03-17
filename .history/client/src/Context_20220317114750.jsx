@@ -22,7 +22,7 @@ export default function SocialHouseContextProvider({ children }) {
   }, []);
 
   return (
-    <SocialHouseContext.Provider value={{  image, setImage, userData, setUserData }}>
+    <SocialHouseContext.Provider value={{ filtered, setFiltered, image, setImage, userData, setUserData }}>
       {children}
     </SocialHouseContext.Provider>
   );

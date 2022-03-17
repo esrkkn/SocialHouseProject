@@ -41,9 +41,10 @@ if (newPost.image) formdata.set('image', newPost.image, 'image')
 
     const response = await axios.post("/posts/add", formdata);
     console.log("save post: response is", response);
+    if (response.data.success) setNewPost(...newPost, response.data.image)
     history.push('/ads');
 
-    if (response.data.success) setNewPost(...newPost, response.data.image)
+    
     console.log("Post is:", newPost);
   };
 
