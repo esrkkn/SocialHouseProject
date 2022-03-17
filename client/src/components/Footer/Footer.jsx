@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
+import { FcKey } from "react-icons/fc";
 
 export default function Footer() {
   return (
@@ -35,11 +36,13 @@ export default function Footer() {
         <div className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom col-xl-11 '>
           <div className='row'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <i className='fas fa-gem me-3'></i>Social House Project
-              </h6>
+            <h5 className="logo">
+                    <FcKey style={{ fontSize: 30 }} />
+                    SocialHouse<span>Project</span>
+                  </h5>
+                  <br />
               <p>
-                Our company was founded on the housing crisis facing everyone in Germany. 
+                Our company was founded in 2022 to help curve the housing crisis facing everyone in Germany. 
               </p>
             </div>
 
@@ -87,7 +90,7 @@ export default function Footer() {
               </p>
               <p>
                 <a href='https://www.ebay-kleinanzeigen.de/stadt/berlin/' className='text-reset'>
-                Secondhand furniture (Ebay)
+                Secondhand Furniture (Ebay)
                 </a>
               </p>
             </div>
