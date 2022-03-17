@@ -1,6 +1,4 @@
-import { React, useState, useContext } from "react";
-import { useHistory } from 'react-router-dom';
-
+import { React, useState, useContext, useNa } from "react";
 import { SocialHouseContext } from "../../Context";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
@@ -23,27 +21,22 @@ function CreatePost() {
   });
   
   const { userData } = useContext(SocialHouseContext);
-  const history = useHistory();
 
   const handleSave = async (e) => {
     e.preventDefault();
     console.log("saved");
-    
+
     const data = {
       owner: userData._id,
       ...newPost
     };
-    const formdata = new FormData()
 
-    Object.entries(data).forEach(item => formdata.set(item[0], item[1]))
+    console.log("Home: handleSave: data is", data);
+    const response = await axios.post("/posts/add", data);
 
-if (newPost.image) formdata.set('image', newPost.image, 'image')
-
-    const response = await axios.post("/posts/add", formdata);
     console.log("save post: response is", response);
-    history.push('/ads');
 
-    if (response.data.success) setNewPost(...newPost, response.data.image)
+    
     console.log("Post is:", newPost);
   };
 
@@ -117,8 +110,7 @@ if (newPost.image) formdata.set('image', newPost.image, 'image')
 
         <Form.Group className="mb-3" controlId="form.image">
           <Form.Label>Add an image</Form.Label>
-          <Form.Control type="file" accept="image/png, image/jpeg" onChange={(e) => setNewPost({ ...newPost, image: e.currentTarget.files[0] })}/>
-        
+          <Form.Control type="file" accept="image/png, image/jpeg" />
         </Form.Group>
 
         <hr></hr>

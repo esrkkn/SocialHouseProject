@@ -41,9 +41,10 @@ if (newPost.image) formdata.set('image', newPost.image, 'image')
 
     const response = await axios.post("/posts/add", formdata);
     console.log("save post: response is", response);
+    if (response.data.success) setNewPost(...newPost, response.data.image)
     history.push('/ads');
 
-    if (response.data.success) setNewPost(...newPost, response.data.image)
+    
     console.log("Post is:", newPost);
   };
 
@@ -117,8 +118,7 @@ if (newPost.image) formdata.set('image', newPost.image, 'image')
 
         <Form.Group className="mb-3" controlId="form.image">
           <Form.Label>Add an image</Form.Label>
-          <Form.Control type="file" accept="image/png, image/jpeg" onChange={(e) => setNewPost({ ...newPost, image: e.currentTarget.files[0] })}/>
-        
+          <Form.Control type="file" accept="image/png, image/jpeg" onChange={}/>
         </Form.Group>
 
         <hr></hr>

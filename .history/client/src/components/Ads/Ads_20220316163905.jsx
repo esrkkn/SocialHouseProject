@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState, useContext  } from "react";
 import { SocialHouseContext } from "../../Context";
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router";
 import axios from "axios";
 import Carousel from "../Home/Carousel"
 import Header from "../Header/Header"
