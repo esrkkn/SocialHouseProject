@@ -46,11 +46,11 @@ export default function Login() {
 
 
   return (
+    <div className="text-center bg-images" >
     <div className="loginPage">
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-">
-         
           </div>
           <div class="col-lg">
             <h2 class="font-weight-light">Login</h2>
@@ -112,6 +112,7 @@ export default function Login() {
     </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
