@@ -7,6 +7,7 @@ import HouseList from "./components/HouseList/HouseList"
 import Register from "./components/Register/Register"
 import Ads from "./components/Ads/Ads";
 import "./App.css"
+import Account from "./components/Account/Account";
 export default function Routes() {
   return (
     <Switch>
@@ -16,6 +17,7 @@ export default function Routes() {
       <Route exact path="/login" render={(props) => <LoginPage {...props} />} />
       <Route exact path="/register" render={(props) => <Register {...props} />} />
       <Route exact path="/ads" render={(props) => <Ads {...props} />} />
+      <Route exact path="/account" render={(props) => <Account {...props} />} />
 
 
       <Route component={Unknown} />

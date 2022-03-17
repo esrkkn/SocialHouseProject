@@ -48,5 +48,32 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.patch('/profile', async (req, res) => {
+
+    try {
+        
+        console.log('req.body is', req.body)
+
+        const {email, firstName, _id} = req.body
+
+        if (!(email || firstName)) return res.send({success: false, errorId: 1})
+
+        // const foundUser = await User.findById({_id})
+        // 
+        // update users (field1, field2) set field1 = email and field2 = username
+
+        const user = await User.findByIdAndUpdate(_id, req.body, {new: true}).select('-__v -pass')
+
+        console.log('Profile: user is', user)
+
+        if (!user) return res.send({success: false, errorId: 2})
+
+        res.send({success: true, user})
+    } catch (error) {
+        
+        console.log('Register ERROR:', error.message)
+        res.send(error.message)
+    }
+})
 
 module.exports  = router

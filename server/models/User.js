@@ -22,11 +22,19 @@ phoneNumber: {
 password: {
     type: String,
     require: true
-}
-
-
-
-
+},
+age: {
+    type: String
+},
+street: {
+    type:String
+},
+city: {
+    type: String
+},
+country: {
+    type: String
+},
 
 })
 

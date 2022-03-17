@@ -1,0 +1,27 @@
+
+.userContainer{
+    display: flex; 
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+  
+}
+
+.image {
+    background-image: url(https://i.ibb.co/Nm8jpMz/stock-photo-man-with-house-model.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+.accForm {
+   
+    background-color: gainsboro;
+    width: 30%;
+    min-height: 500px;
+    border: 1px solid gray;
+    border-radius: 10px; 
+    margin: 80px  0;
+    padding: 25px
+   
+};
+

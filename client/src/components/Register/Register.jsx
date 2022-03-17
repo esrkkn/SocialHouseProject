@@ -90,7 +90,7 @@ export default function Register() {
       <MDBInput 
       className='mb-4' 
       type='password' 
-      id='form3Example4' 
+      id='form3Example5' 
       placeholder="Password" 
       value={data.password}
      onChange={(e) => setData({ ...data, password: e.target.value })}
