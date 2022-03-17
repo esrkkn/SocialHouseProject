@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 import "./Account.css";
 
 export default function Account() {
-  const history = useHistory();
+  //const history = useHistory();
 
   const { userData, setUserData } = useContext(SocialHouseContext);
   const [data, setData] = useState({
@@ -23,9 +23,12 @@ export default function Account() {
     setData({ ...data, ...userData });
   }, []);
 
-if (!userData) history.push("/");
+//if (!userData) history.push("/");
 
-  const handleSave = async () => {
+  const handleSave = async (e) => {
+
+    e.preventDefault()
+
     console.log("data is ", data);
 
     const response = await axios.patch("/users/profile", data);
@@ -34,6 +37,7 @@ if (!userData) history.push("/");
 
     if (response.data.success) setUserData({  ...response.data.user });
   };
+
 console.log("userData from account", userData);
   return (
     <div className="userContainer">
@@ -48,7 +52,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.firstName}
             value={data.firstName}
-            onChange={(e) => setData({ ...data, firstName: e.target.value }), (e) =>setUserData({ ...userData, firstName: e.target.value }) }
+            onChange={(e) => setData({ ...data, firstName: e.target.value }) }
           />
         </>
         <>
@@ -59,7 +63,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.lastName}
             value={data.lastName}
-            onChange={(e) => setData({ ...data, lastName: e.target.value }), (e) =>setUserData({ ...userData, lastName: e.target.value })}
+            onChange={(e) => setData({ ...data, lastName: e.target.value })}
           />
         </>
         <>
@@ -70,7 +74,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.phoneNumber}
             value={data.phoneNumber}
-            onChange={(e) => setData({ ...data, phoneNumber: e.target.value }), (e) =>setUserData({ ...userData, phoneNumber: e.target.value })}
+            onChange={(e) => setData({ ...data, phoneNumber: e.target.value })}
           />
         </>
         <>
@@ -81,7 +85,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.age}
             value={data.age}
-            onChange={(e) => setData({ ...data, age: e.target.value }, (e) =>setUserData({ ...userData, age: e.target.value }))}
+            onChange={(e) => setData({ ...data, age: e.target.value })}
           />
         </>
         <>
@@ -92,7 +96,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.street}
             value={data.street}
-            onChange={(e) => setData({ ...data, street: e.target.value }, (e) =>setUserData({ ...userData, street: e.target.value }))}
+            onChange={(e) => setData({ ...data, street: e.target.value })}
           />
         </>
         <>
@@ -103,7 +107,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.city}
             value={data.city}
-            onChange={(e) => setData({ ...data, city: e.target.value }), (e) =>setUserData({ ...userData, city: e.target.value })}
+            onChange={(e) => setData({ ...data, city: e.target.value })}
           />
         </>
         <>
@@ -114,7 +118,7 @@ console.log("userData from account", userData);
             aria-describedby="passwordHelpBlock"
             placeholder={userData.country}
             value={data.country}
-            onChange={(e) => setData({ ...data, country: e.target.value }), (e) =>setUserData({ ...userData, country: e.target.value })}
+            onChange={(e) => setData({ ...data, country: e.target.value })}
           />
         </>
         <div className="h-center">

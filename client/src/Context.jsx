@@ -9,7 +9,7 @@ export default function SocialHouseContextProvider({ children }) {
   const [userData, setUserData] = useState(null);
 
   console.log("userData in context is", userData);
-  useEffect(() => {
+ /*  useEffect(() => {
     if (userData) {
       sessionStorage.setItem("userData", JSON.stringify(userData));
     }
@@ -20,7 +20,7 @@ export default function SocialHouseContextProvider({ children }) {
     if (userData) {
       setUserData(JSON.parse(userData));
     }
-  }, []);
+  }, []); */
 
   return (
     <SocialHouseContext.Provider value={{ filtered, setFiltered, image, setImage, userData, setUserData }}>

@@ -46,6 +46,7 @@ header .overlay{
 
 .navPart {
     display: flex;
+    align-items: center;
     
 }
 

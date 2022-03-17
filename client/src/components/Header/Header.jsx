@@ -59,15 +59,15 @@ export default function App() {
                   <div className="navSection">
                     <div className="navPart">
                     <MDBNavbarItem active>
-                      <MDBNavbarLink aria-current="page" href="/">
+                      <NavLink aria-current="page" to="/">
                         Home
-                      </MDBNavbarLink>
+                      </NavLink>
                     </MDBNavbarItem>
 
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="">
+                      
                         <NavLink to="/ads">Ads</NavLink>
-                      </MDBNavbarLink>
+                     
                     </MDBNavbarItem>
                   </div>
 
@@ -80,12 +80,12 @@ export default function App() {
                       </MDBNavbarLink>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
-                      <MDBNavbarLink href="#">
+                     
                         <NavLink to="/account">
                           {" "}
                           <FaRegUserCircle />{" "}
                         </NavLink>
-                      </MDBNavbarLink>
+                     
                     </MDBNavbarItem>
                     <MDBNavbarItem>
                       <MDBNavbarLink href="#">
@@ -101,22 +101,22 @@ export default function App() {
                 <div className="navSection">
                   <div className="navPart">
                   <MDBNavbarItem active>
-                    <MDBNavbarLink aria-current="page" href="/">
+                    <NavLink aria-current="page" to="/">
                       Home
-                    </MDBNavbarLink>
+                    </NavLink>
                   </MDBNavbarItem>
 </div>
                   <div style={spacerStyle}></div>
                   <div className="navPart" >
                   <MDBNavbarItem>
-                    <MDBNavbarLink href="#">
+                    
                       <NavLink to="/register">Register</NavLink>
-                    </MDBNavbarLink>
+                    
                   </MDBNavbarItem>
                   <MDBNavbarItem>
-                    <MDBNavbarLink href="#">
+                    
                       <NavLink to="/login"> LogIn</NavLink>
-                    </MDBNavbarLink>
+                   
                   </MDBNavbarItem>
                 </div></div>
               )}
