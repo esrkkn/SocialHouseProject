@@ -49,7 +49,7 @@ return (
         <h1 style={{textAlign: "center", marginBottom: "100px"}}>List of Apartments</h1>
       <div className="cardContainer">
         {posts.map((item) => (
-          <MDBCard style={{ maxWidth: "100%", padding: "20px 20px 0 20px" }} key={item._id}>
+          <MDBCard style={{ maxWidth: "100%", padding: "20" }} key={item._id}>
           <MDBRow className="g-0">
             <MDBCol md="4">
               <MDBCardImage src={item.image} alt="..." fluid  />

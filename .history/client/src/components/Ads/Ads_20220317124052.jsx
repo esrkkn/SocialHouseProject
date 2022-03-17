@@ -49,19 +49,19 @@ return (
         <h1 style={{textAlign: "center", marginBottom: "100px"}}>List of Apartments</h1>
       <div className="cardContainer">
         {posts.map((item) => (
-          <MDBCard style={{ maxWidth: "100%", padding: "20px 20px 0 20px" }} key={item._id}>
+          <MDBCard style={{ maxWidth: "100%" }} key={item._id}>
           <MDBRow className="g-0">
             <MDBCol md="4">
               <MDBCardImage src={item.image} alt="..." fluid  />
             </MDBCol>
             <MDBCol md="8">
               <MDBCardBody>
-                <MDBCardTitle style={{ fontSize: "40px", padding: "20px" }}>{item.title}</MDBCardTitle>
-                <MDBCardText style={{ fontSize: "20px", marginTop :" 40px", padding: "20px"}}>{item.description}</MDBCardText>
-                <MDBCardText style={{ fontSize: "20px", paddingLeft: "20px", fontWeight: "bold"}}>{item.location}</MDBCardText>
-                <MDBCardText style={{  display: "flex", justifyContent: "space-between", alignItems: "center", paddingLeft: "20px" }}>
-                  <div style={{display: "flex", alignItems: "baseline"}}><span style={{ fontSize: "40px", }}>{item.rooms}</span><p>rm</p></div>
-                  <span style={{ fontSize: "50px", fontWeight: "bold", marginRight: "50px" }}>{item.price}€</span>
+                <MDBCardTitle style={{ fontSize: "50px" }}>{item.title}</MDBCardTitle>
+                <MDBCardText>{item.description}</MDBCardText>
+                <MDBCardText>{item.location}</MDBCardText>
+                <MDBCardText>
+                  <span>{item.rooms}rm</span>
+                  <span>{item.price}€</span>
                 </MDBCardText>
               </MDBCardBody>
             </MDBCol>

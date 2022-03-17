@@ -28,7 +28,7 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarExample01">
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" to="/">
+                <MDBNavbarLink aria-current="page" href="/">
                   <h5 className="logo">
                     <FcKey style={{ fontSize: 30 }} />
                     SocialHouse<span>Project</span>
@@ -36,7 +36,7 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" to="/" style={{color:"#585757"}}>
+                <MDBNavbarLink aria-current="page" href="/" style={{color:"grey"}}>
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>

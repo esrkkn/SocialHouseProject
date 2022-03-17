@@ -5,7 +5,7 @@ import "./Carousel.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Header/Header.css";
 import Card from 'react-bootstrap/Card'
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import
 
 
 export default function Main({ deviceType }) {
@@ -50,6 +50,13 @@ export default function Main({ deviceType }) {
       address: "12107 Berlin",
       room: "2Zi",
       price: "959,62 € "
+    },{
+      image:
+        "https://pictures.immobilienscout24.de/listings/aa94b0f5-6b9e-4245-b2da-8098e13a7faf-1508197941.jpeg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73",
+      text: "Altbau Nähe Tempelhofer Hafen",
+      address: "12099 Berlin",
+      room: "4Zi",
+      price: "2.412 € "
     },{
       image:
         "https://pictures.immobilienscout24.de/listings/1d93e091-0324-42ae-b816-f9c92dea9345-1508065319.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73",

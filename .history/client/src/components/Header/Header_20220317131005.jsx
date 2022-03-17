@@ -19,7 +19,7 @@ const spacerStyle = {
 
 export default function App() {
   return (
-    <header className="text-center bg-image" >
+    <header className="text-center bg-image" style={{}}>
       <MDBNavbar expand="lg" light bgColor="white" sticky className="navbarExample02">
         <MDBContainer fluid>
           <MDBNavbarToggler aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarExample01">
             <MDBNavbarNav right className="mb-2 mb-lg-0">
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" to="/">
+                <MDBNavbarLink aria-current="page" href="/">
                   <h5 className="logo">
                     <FcKey style={{ fontSize: 30 }} />
                     SocialHouse<span>Project</span>
@@ -36,28 +36,28 @@ export default function App() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem active>
-                <MDBNavbarLink aria-current="page" to="/" style={{color:"#585757"}}>
+                <MDBNavbarLink aria-current="page" href="/">
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink ><NavLink to="/ads" style={{textDecorationLine: "none", color:"#585757"}}>Ads</NavLink></MDBNavbarLink>
+                <MDBNavbarLink href=""><NavLink to="/ads">Ads</NavLink></MDBNavbarLink>
               </MDBNavbarItem>
 
               <div style={spacerStyle}></div>
               <MDBNavbarItem>
                 <MDBNavbarLink >
-                  <NavLink to="/post" style={{textDecorationLine: "none", color:"#585757"}}>Create Post</NavLink>
+                  <NavLink to="/post">Create Post</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink >
-                  <NavLink to="/register" style={{textDecorationLine: "none", color:"#585757"}}>Register</NavLink>
+                  <NavLink to="/register">Register</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink >
-                  <NavLink to="/login" style={{textDecorationLine: "none", color:"#585757"}}> Login</NavLink>
+                  <NavLink to="/login"> Login</NavLink>
                 </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
