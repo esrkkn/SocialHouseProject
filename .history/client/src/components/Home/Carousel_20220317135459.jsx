@@ -5,7 +5,7 @@ import "./Carousel.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Header/Header.css";
 import Card from 'react-bootstrap/Card'
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 export default function Main({ deviceType }) {
@@ -123,7 +123,7 @@ export default function Main({ deviceType }) {
             </h1>
             <NavLink to="/ads"><button className="btn btn-outline-light btn-lg">
               Find Your House, Now!
-            </button></NavLink>
+            </button></Link>
           </div>
         </div>
       </div>
