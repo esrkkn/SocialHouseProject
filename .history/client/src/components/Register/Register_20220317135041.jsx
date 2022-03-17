@@ -9,7 +9,6 @@ import {
   MDBBtn,
   MDBIcon
 } from 'mdb-react-ui-kit';
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Register() {
     const [data, setData] = useState({
@@ -99,7 +98,7 @@ export default function Register() {
       />
 
       <MDBBtn type='submit' className='mb-4' block variant="outline-secondary" onClick={handleClick} color='info'>
-        <NavLink to="/login">Submit</NavLink>
+        Submit
       </MDBBtn>{" "}
 
       <div className='text-center'>

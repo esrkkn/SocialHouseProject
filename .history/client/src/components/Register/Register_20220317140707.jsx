@@ -9,7 +9,7 @@ import {
   MDBBtn,
   MDBIcon
 } from 'mdb-react-ui-kit';
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { NavLink } from 'react-bootstrap';
 
 export default function Register() {
     const [data, setData] = useState({
